@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // const a = Math.max(6, 3, -10, 73); // 73
+    // const b = Math.min(6, 3, -10, 73); // -10
+
+    // const c = Math.abs(4); // 4
+    // const d = Math.abs(-4); // 4
+
+    // const e = Math.ceil(4.00001); // 5 - вверх
+    // const f = Math.floor(4.73); // 4 - вниз
+    // const g = Math.round(4.73); // 5 - по правилам математики
+
+    // const h = Math.pow(6, 2); // 6 ** 2 === 36
+    // const i = Math.sqrt(36); // 6
+
+    // const j = Math.random(); // случайное дробное число (от 0 до 1)
+
+    // // 4. Написать функцию, которая принимает два числа - основание степени и показатель степени и возвращает результат возведения числа в степень
+    const getPow = (base, exp) => Math.pow(base, exp);
+
+    // console.log(getPow(2, 3));
+    // console.log(getPow(4, 2));
+
+    // 5. Сгенерировать случайное целое число от 0 до 10 Math.random
+    const random = Math.round(Math.random() * 10);
+    const random_2 = Math.floor(Math.random() * 11);
+
+    console.log(random)
+    console.log(random_2)
+
+    //6 Сгенерировать случайное целое от 0 до 30. Вывести его на консоль
+    const random_3 = Math.round(Math.random() * 30);
+    console.log(random_3)
+
+    //7. Сгененировать случайное целое число от 10 до 20
+    const random_4 = Math.round(Math.random() * 10 + 10);
+    console.log(random_4)
+
+    // 8. Сгененировать случайное целое число от 15 до 30
+    const random_5 = Math.round(Math.random() * 15 + 15);
+    console.log(random)
+
+    //  // 9. Написать функцию, которая принимает массив со строками. И формирует новый массив со строками, чья длина превышает 5 символов
+    //const greetings = ['hello', 'hi', 'good morning', 'good afternoon', 'hey']; // ['good morning', 'good afternoon']
+    function filterLengtharr(arr) {
+        const result = [];
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i].length > 5) {
+                result.push(arr[i]);
+            }
+        }
+        return result;
+    }
+
+    const greetings = ['hello', 'hi', 'good morning', 'good afternoon', 'hey'];
+    const filteredGreetings = filterLengtharr(greetings);
+    console.log(filteredGreetings);
+
+
+    //ПРАКТИКА
+    // Написать стрелочную ф-ю, которая перебирает массив слов. Массив слов перебираеться через аргумент. И возвращает нам самое длинное слово.
+    //     const longestWord = (words) => {
+    //     let result = words[0];
+    //     for (let i = 0; i < words.length; i++){
+    //         if (result.length < words[i].length) {
+    //             result = words[i];
+    //         }
+    //     }
+    //     return result;
+    // };
+
+    window.setInterval(() => console.log(123), 1000)
+
+    // З
+
+    // Задача 3 Написать функцию которая в setInterval выводит Ваше имя + случайное число.
+
+
+    setInterval(/* функция тут */, 1000);
+
+
+    // Задача написать функцию которая принимает 2 аргумента, первый - фунция, второй - число и надо выполнить функцию из первого аргумента столько раз сколько у нас число во втором аргументе
+
+    //myInterval(() => {},10)
+
+    // myInterval(() => {}, 10)
+
+    function myInterval(func, number) {
+        func();
+    }
+
+    const myFunc = () => {
+        console.log(Math.random());
+    }
+
+    myInterval(myFunc);
+</script>
+
+</html>
