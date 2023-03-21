@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  // Задача написать функцию которая принимает 2 аргумента
+  // первый - функция, второй - число
+  // и надо выполнить функцию из первого аргумента столько раз сколько у нас число во втором аргументе
+  // myInterval(() => {}, 10)
+
+  // https://developer.mozilla.org/en-US/docs/Web/API/clearInterval
+
+
+  // 1. Написать ф-ю getMyName которая выводит на консоль ваше имя 1 раз
+
+  //2. 20 раз выполнить эту ф-ю getMyName
+
+
+  // document.body.innerHTML = "<p>Sergey</p>"
+  function insertNameIntoParagraph() {
+    var name = "Виталий"; // задаем имя для вставки
+    var paragraph = document.querySelector("p"); // выбираем первый элемент <p> на странице
+    paragraph.textContent = "Меня зовут " + name; // вставляем имя внутрь элемента
+  }
+
+  /*
+  Создать объект названием Calculations
+  У объекта должны быть свойства:
+  - squarePow - это должна быть функция которая возводит число в квадрат
+  - cubePow - это должна быть функция которая возводит число в куб
+  - downNumber - это должна быть функция которая округлять число в меньшую сторону
+  Каждая функция должна принимать один аргумент (число) и вовращать результат
+  */
+
+</script>
+
+</html>
