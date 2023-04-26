@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const logoImage = document.createElement('img');
+    const wrapper = document.createElement('div');
+    const input = document.createElement('input');
+
+    logoImage.setAttribute('src', 'https://www.google.ru/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png');
+
+    logoImage.setAttribute('alt', 'Logo of Google');
+
+    input.setAttribute('type', 'text');
+
+    input.setAttribute('placeholder', 'Search');
+    input.setAttribute('class', 'input-search');
+
+
+    //6 по клику на инпут снизу нарисовать div в котором очень много абзацев
+    const articles = [
+        'sfsf',
+        'fsfs',
+        'grgr',
+        'sssj',
+        'eijd',
+        'sleo',
+        'sfjl',
+        'sncn',
+
+    ]
+
+    //8 Когда что-то вводиться в инпут надо:
+    // - очищать весь нижний блок абзацев
+    // - все обзацы фильтровать на наличие поисковой фразы инпута
+    // - рисовать абзатцы с отфильтрованными фразами;
+
+
+    //5 реагировать на клилк по инпуту
+    input.addEventListener('click', () => {
+        const existedDiv = document.querySelector('.search-items');
+        if (!existedDiv) {
+            const div = document.createElement('div');
+            div.setAttribute('class', 'search-items');
+            articles.forEach((article) => {
+                const p = document.createElement('p');
+                p.innerText = article;
+                div.append(p);
+            })
+            wrapper.append(div);
+        }
+
+    })
+
+    //7 Поймать событие change у инпута (это событие срабатывает когда в инпут вводиться что-то)
+
+    input.addEventListener('input', () => {
+        const searchPrase = input.value;
+        // - очищать весь нижний блок абзацев
+        const existedDiv = document.querySelector('.search-items');
+        if (existedDiv) {
+            existedDiv.innerHTML = " ";
+        }
+
+        const filteredList = articles.filter(article => article.includes(searchPrase));
+        console.log(filteredList);
+    });
+
+    wrapper.append(logoImage);
+    wrapper.append(input);
+    wrapper.classList.add('wrapper');
+
+
+    document.body.append(wrapper);
+
+
+
+</script>
+
+</html>

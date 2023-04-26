@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // Как работает forEach
+    // const array = [1, 2, 3];
+
+    // array.forEach(item => {
+    //     console.log(item * 10);
+    // })
+
+    // const myForEach = (array, func) => {
+    //     for (let i = 0; i < array.length; i++) {
+    //         // const element = array[i];
+    //         // func(element);
+    //         func(array[i] * 10)
+    //     }
+    // };
+
+    // console.log("myForEach");
+
+
+    // myForEach(array, (item) => {
+    //     console.log(item);
+    // })
+
+    const array = [1, 2, 3, 4];
+
+    // array.forEach(item => {
+    //     console.log(item);
+    // })
+
+    function myForEach(array, callback) {
+        for (let i = 0; i < array.length; i++) {
+            // const element = array[i];
+            // func(element);
+            callback(array[i])
+        }
+    }
+
+    function callback(el) {
+        console.log(el);
+    }
+    myForEach(array, callback);
+
+
+
+
+</script>
+
+</html>
